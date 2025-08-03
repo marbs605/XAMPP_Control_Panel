@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="XAMPP_Server_Starter:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/XAMPP_Server_Starter_jar</output-path>
+    <root id="archive" name="XAMPP_Server_Starter.jar">
+      <element id="module-output" name="XAMPP_Server_Starter" />
+    </root>
+  </artifact>
+</component>
