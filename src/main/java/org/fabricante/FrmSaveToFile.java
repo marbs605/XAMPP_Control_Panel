@@ -72,6 +72,12 @@ public class FrmSaveToFile extends JFrame {
     }
 
     private void saveTextToFile(String text) {
+        File isFileExist = findExistingRecordsFile();
+
+        if (isFileExist == null) {
+            isFileExist = new File("records.txt");
+        }
+
         File file = new File("records.txt");
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
             writer.write(text);
@@ -81,4 +87,18 @@ public class FrmSaveToFile extends JFrame {
             JOptionPane.showMessageDialog(this, "Error:\n" + ioe.getMessage());
         }
     }
+
+    private File findExistingRecordsFile() {
+        String userHome = System.getProperty("user.home");
+        File desktopFile = new File(userHome + File.separator + "Desktop" + File.separator + "records.txt");
+        File downloadsFile = new File(userHome + File.separator + "Downloads" + File.separator + "records.txt");
+        File currentDirFile = new File("records.txt");
+
+        if (desktopFile.exists()) return desktopFile;
+        if (downloadsFile.exists()) return downloadsFile;
+        if (currentDirFile.exists()) return currentDirFile;
+
+        return null;
+    }
+
 }
