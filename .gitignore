@@ -36,3 +36,33 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+# Ignore compiled class files
+*.class
+
+# Ignore JAR files
+*.jar
+
+# Ignore text files (e.g., records.txt)
+*.txt
+
+# Ignore log files
+*.log
+
+# Ignore IDE project files
+.idea/
+*.classpath
+*.project
+.settings/
+nbproject/private/
+
+# Ignore build output
+/build/
+/target/
+/out/
+
+Thumbs.db
+
+# Ignore editor swap/backup files
+*.swp
+*~
